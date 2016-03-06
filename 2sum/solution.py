@@ -9,6 +9,15 @@ def twoSum(num,target):
 		if res in dic:
 			return sorted([dic[elem]+1,dic[res]+1])
 
+def twoSum1(num, target):
+	#refactor
+	dic = {}
+	for index, n in enumerate(num, 1):
+		rest = target - n
+		if rest in dic:
+			return dic[rest], index
+		dic[n] = index
+
 num = [5, 2, 7, 1, 9]
 target = 3
-print twoSum(num, target)
+print twoSum1(num, target)
