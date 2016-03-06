@@ -5,9 +5,9 @@ def twoSum(num,target):
 		dic[num[i]] = i
 
 	for elem in dic:
-		res = target - elem
-		if res in dic:
-			return sorted([dic[elem]+1,dic[res]+1])
+		rest = target - elem
+		if rest in dic:
+			return sorted([dic[elem]+1,dic[rest]+1])
 
 def twoSum1(num, target):
 	#refactor
@@ -20,4 +20,5 @@ def twoSum1(num, target):
 
 num = [5, 2, 7, 1, 9]
 target = 3
+print twoSum(num, target)
 print twoSum1(num, target)
