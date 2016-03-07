@@ -7,14 +7,19 @@ For example, Given input array A = [1,1,2],
 Your function should return length = 2, and A is now [1,2].
 """
 class Solution(object):
-	def remove_duplicates(self, alist):
+	def remove_duplicates(self, A):
 		# @param sorrted array
-		# @return integer length
-		for i in range(len(alist)-2):
-			if alist[i] == alist[i+1]:
-				del alist[i+1]
-		return len(alist)
+		# @return integer
+		if len(A) == 0:
+			return 0
+		j = 0 # use a pointer
+		for i in range(len(A)):
+			if A[i] != A[j]:
+				# move non duplicated elem to left part
+				A[i], A[j+1] = A[j+1], A[i]
+				j += 1
+		return j + 1
 
-A = [1,1,2,3,5,5]
+alist = [1,1,1,2,3,5,5]
 s = Solution()
-print s.remove_duplicates(A)
+print s.remove_duplicates(alist) #
