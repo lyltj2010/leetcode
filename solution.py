@@ -4,9 +4,8 @@
 """
 class Solution(object):
 	def f():
-		"""
-		
-		"""
+		# 
+		# 
 		pass
 
 
