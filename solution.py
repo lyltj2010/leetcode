@@ -3,7 +3,8 @@
 
 """
 class Solution(object):
-	def f():
+	# time O(); space O()
+	def foo():
 		# 
 		# 
 		pass
