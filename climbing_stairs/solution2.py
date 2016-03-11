@@ -15,6 +15,6 @@ class Solution(object):
 			dp[i] = dp[i-1] + dp[i-2]
 		return dp[n]
 
-n = 2
+n = 5
 s = Solution()
 print s.climb_stairs_1(n) #8

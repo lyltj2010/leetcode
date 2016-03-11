@@ -15,4 +15,4 @@ class Solution(object):
 
 n = 5
 s = Solution()
-print s.climb_stairs(n) #5
+print s.climb_stairs(n) # 8
